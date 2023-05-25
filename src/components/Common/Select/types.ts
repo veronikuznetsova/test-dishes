@@ -4,4 +4,5 @@ export interface ISelectProps {
   register: any;
   errors: any;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  type: string;
 }

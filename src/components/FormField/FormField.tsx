@@ -18,13 +18,14 @@ const FormField: React.FC<IFormFieldProps> = ({
 }) => {
   return (
     <FormGroup>
-      <Label htmlFor="name" label="Dish Name" />
+      <Label htmlFor="name" label={label} />
       {type === "select" ? (
         <Select
-          id="type"
-          options={["pizza", "soup", "sandwich"]}
+          id={name}
+          options={options || []}
           register={register}
           errors={errors}
+          type={type}
           onChange={handleTypeChange}
         />
       ) : (
