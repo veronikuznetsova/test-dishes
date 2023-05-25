@@ -22,7 +22,7 @@ const DishForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const onSubmit = async (data: any) => {
-    await submitFormData(data, setApiErrors, setIsSuccess, reset);
+    await submitFormData(data, setApiErrors, setIsSuccess, reset, setSelectedType);
   };
 
   const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -66,6 +66,7 @@ const DishForm = () => {
             type="number"
             register={register}
             errors={errors}
+            min={1}
           />
 
           <FormField
@@ -74,6 +75,7 @@ const DishForm = () => {
             type="number"
             register={register}
             errors={errors}
+            min={0.1}
           />
         </>
       )}
@@ -85,6 +87,8 @@ const DishForm = () => {
           type="number"
           register={register}
           errors={errors}
+          min={1}
+          max={10}
         />
       )}
 
@@ -95,6 +99,7 @@ const DishForm = () => {
           type="number"
           register={register}
           errors={errors}
+          min={1}
         />
       )}
 

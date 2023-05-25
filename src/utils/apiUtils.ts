@@ -6,7 +6,8 @@ export const submitFormData = async (
     data: any,
     setApiErrors: React.Dispatch<React.SetStateAction<IApiErrors>>,
     setIsSuccess: React.Dispatch<React.SetStateAction<boolean>>,
-    reset: () => void
+    reset: () => void,
+    setSelectedType: React.Dispatch<React.SetStateAction<string>>,
     ) => {
     try {
         const url = "https://umzzcc503l.execute-api.us-west-2.amazonaws.com/dishes/";
@@ -22,6 +23,7 @@ export const submitFormData = async (
         if (response.ok) {
         setApiErrors({});
         setIsSuccess(true);
+        setSelectedType("");
         reset();
         } else {
         const errorData: IApiErrors = {};

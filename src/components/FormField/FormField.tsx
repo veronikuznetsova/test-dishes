@@ -14,7 +14,9 @@ const FormField: React.FC<IFormFieldProps> = ({
   register,
   errors,
   step,
-  handleTypeChange,
+  min,
+  max,
+  handleTypeChange
 }) => {
   return (
     <FormGroup>
@@ -35,6 +37,8 @@ const FormField: React.FC<IFormFieldProps> = ({
           step={step}
           register={register}
           errors={errors}
+          min={min}
+          max={max}
         />
       )}
       {errors[name] && <ErrorBlockMessage title="This field is required" />}

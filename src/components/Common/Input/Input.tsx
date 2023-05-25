@@ -8,6 +8,8 @@ const Input: React.FC<IInputProps> = ({
   step,
   register,
   errors,
+  min,
+  max
 }) => {
   const hasError = errors[id];
 
@@ -27,6 +29,8 @@ const Input: React.FC<IInputProps> = ({
         type={type}
         id={id}
         step={step}
+        min={min}
+        max={max}
         {...register(id, { required: true })}
         className={getInputClassName()}
       />

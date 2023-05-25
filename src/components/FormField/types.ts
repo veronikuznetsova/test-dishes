@@ -6,5 +6,7 @@ export interface IFormFieldProps {
   register: any;
   errors: any;
   step?: string;
+  min?: number;
+  max?: number;
   handleTypeChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }

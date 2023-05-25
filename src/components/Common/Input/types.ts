@@ -4,4 +4,6 @@ export interface IInputProps {
   step?: string;
   register: any;
   errors: any;
+  min?: number;
+  max?: number;
 }
