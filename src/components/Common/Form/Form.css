@@ -1,0 +1,20 @@
+@keyframes inputHighlight {
+  from {
+    background-color: #f2f2f2;
+  }
+  to {
+    background-color: #e6f2ff;
+  }
+}
+
+.dish-form {
+  width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+  box-sizing: border-box;
+}

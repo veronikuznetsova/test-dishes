@@ -1,0 +1,30 @@
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group:hover label {
+  color: #333;
+}
+
+.form-group:hover input:not(:focus),
+.form-group:hover select:not(:focus) {
+  background-color: #f6f6f6;
+}
+
+.form-group:focus-within label {
+  color: rgb(94, 129, 244);
+}
+
+.form-group:focus-within input:not(:focus),
+.form-group:focus-within select:not(:focus) {
+  background-color: #e9f5ff;
+}
+
+.form-group.invalid input,
+.form-group.invalid select {
+  border-color: #ff4d4f;
+}
+
+.form-group.invalid .error-message {
+  opacity: 1;
+}

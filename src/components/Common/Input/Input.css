@@ -1,0 +1,72 @@
+@keyframes inputHighlight {
+  from {
+    background-color: #f2f2f2;
+  }
+  to {
+    background-color: #e6f2ff;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box; /* Added */
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(94, 129, 244, 0.4);
+}
+
+input:invalid {
+  animation: inputHighlight 0.3s ease;
+}
+
+.input-error {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.4);
+}
+
+.time-input {
+  appearance: none;
+  padding: 0.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.time-input::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
+.time-input::-webkit-datetime-edit-hour-field,
+.time-input::-webkit-datetime-edit-minute-field,
+.time-input::-webkit-datetime-edit-second-field {
+  width: 50px;
+}
+
+.time-input::-webkit-datetime-edit-text {
+  color: #333;
+}
+
+.time-input::-webkit-inner-spin-button,
+.time-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.time-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(94, 129, 244, 0.4);
+}
+
+.input-error {
+  border-color: #ff4d4f;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.4);
+}
